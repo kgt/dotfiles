@@ -87,5 +87,6 @@
 
 (if (fboundp 'ruby-mode)
     (setq auto-mode-alist (append '(("Rakefile$" . ruby-mode)
-				    ("Gemfile$"  . ruby-mode))
+				    ("Gemfile$"  . ruby-mode)
+				    (".gemspec$" . ruby-mode))
 				  auto-mode-alist)))
