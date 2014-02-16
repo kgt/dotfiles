@@ -16,8 +16,11 @@
 (setq default-frame-alist (append '((width          . 80)
 				    (height         . 47)
 				    (tool-bar-lines . nil)
-				    (font           . "Andale Mono-12")
 				    (alpha          . 90))
+				  (cond ((eq system-type 'windows-nt)
+					 '((font . "Consolas-10")))
+					((eq system-type 'darwin)
+					 '((font . "Andale Mono-12"))))
 				  default-frame-alist))
 
 ;; 行数、桁数
