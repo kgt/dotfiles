@@ -75,10 +75,7 @@
 ;; -----------------------------------------------------------------------------
 
 (if (fboundp 'magit-status)
-    (progn
-      (global-set-key (kbd "C-c g") 'magit-status)
-      (if (eq system-type 'darwin)
-	  (setq magit-emacsclient-executable (concat invocation-directory "bin/emacsclient")))))
+    (global-set-key (kbd "C-c g") 'magit-status))
 
 ;; -----------------------------------------------------------------------------
 ;; ruby-mode
