@@ -44,9 +44,10 @@
 ;; -----------------------------------------------------------------------------
 
 (if (fboundp 'package-initialize)
-    (progn (setq package-archives '(("gnu"   . "http://elpa.gnu.org/packages/")
-				    ("melpa" . "http://melpa.milkbox.net/packages/")))
-	   (package-initialize)))
+    (progn
+      (setq package-archives '(("gnu"   . "http://elpa.gnu.org/packages/")
+			       ("melpa" . "http://melpa.milkbox.net/packages/")))
+      (package-initialize)))
 
 ;; -----------------------------------------------------------------------------
 ;; coffee-mode
@@ -74,9 +75,10 @@
 ;; -----------------------------------------------------------------------------
 
 (if (fboundp 'magit-status)
-    (progn (global-set-key (kbd "C-c g") 'magit-status)
-	   (if (eq system-type 'darwin)
-	       (setq magit-emacsclient-executable (concat invocation-directory "bin/emacsclient")))))
+    (progn
+      (global-set-key (kbd "C-c g") 'magit-status)
+      (if (eq system-type 'darwin)
+	  (setq magit-emacsclient-executable (concat invocation-directory "bin/emacsclient")))))
 
 ;; -----------------------------------------------------------------------------
 ;; ruby-mode
