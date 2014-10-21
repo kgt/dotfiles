@@ -85,10 +85,10 @@
 ;; -----------------------------------------------------------------------------
 
 (if (fboundp 'ruby-mode)
-    (setq auto-mode-alist (append '(("Rakefile$" . ruby-mode)
-				    ("Gemfile$"  . ruby-mode)
-				    (".gemspec$" . ruby-mode))
-				  auto-mode-alist)))
+    (dolist (regexp '("Rakefile$"
+		      "Gemfile$"
+		      ".gemspec$"))
+      (add-to-list 'auto-mode-alist (cons regexp 'ruby-mode))))
 
 ;; -----------------------------------------------------------------------------
 ;; solarized-theme
