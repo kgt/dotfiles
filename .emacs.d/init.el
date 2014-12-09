@@ -2,11 +2,8 @@
 ;; package
 ;; -----------------------------------------------------------------------------
 
-(if (fboundp 'package-initialize)
-    (progn
-      (setq package-archives '(("gnu"   . "http://elpa.gnu.org/packages/")
-			       ("melpa" . "http://melpa.milkbox.net/packages/")))
-      (package-initialize)))
+(if (require 'cask nil t)
+    (cask-initialize))
 
 ;; -----------------------------------------------------------------------------
 ;; init-loader
