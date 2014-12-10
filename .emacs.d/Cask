@@ -12,4 +12,5 @@
 (depends-on "slim-mode")
 (depends-on "solarized-theme")
 (depends-on "undo-tree")
+(depends-on "use-package")
 (depends-on "yaml-mode")
