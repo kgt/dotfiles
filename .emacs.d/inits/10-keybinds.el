@@ -1,3 +1,3 @@
-(global-set-key (kbd "C-c t") 'toggle-truncate-lines)
+(global-set-key (kbd "C-x t") 'toggle-truncate-lines)
 
 (windmove-default-keybindings)
