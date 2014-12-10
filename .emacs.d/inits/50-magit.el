@@ -1,2 +1,2 @@
 (use-package magit
-  :bind (("C-c g" . magit-status)))
+  :bind (("C-x g" . magit-status)))
