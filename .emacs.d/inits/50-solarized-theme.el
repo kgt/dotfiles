@@ -1,2 +1,3 @@
-(if (member 'solarized-dark (custom-available-themes))
-    (load-theme 'solarized-dark t))
+(use-package solarized-theme
+  :config
+  (load-theme 'solarized-dark t))

@@ -1,2 +1,3 @@
-(if (fboundp 'global-undo-tree-mode)
-    (global-undo-tree-mode))
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode))

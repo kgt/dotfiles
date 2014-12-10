@@ -1,2 +1,4 @@
-(if (fboundp 'flymake-ruby-load)
-    (add-hook 'ruby-mode-hook 'flymake-ruby-load))
+(use-package flymake-ruby
+  :defer t
+  :config
+  (add-hook 'ruby-mode-hook 'flymake-ruby-load))

@@ -17,7 +17,7 @@
 ;; init-loader
 ;; -----------------------------------------------------------------------------
 
-(if (fboundp 'init-loader-load)
-    (progn
-      (setq init-loader-show-log-after-init 'error-only)
-      (init-loader-load)))
+(use-package init-loader
+  :config
+  (setq init-loader-show-log-after-init 'error-only)
+  (init-loader-load))
