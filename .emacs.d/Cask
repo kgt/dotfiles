@@ -10,7 +10,6 @@
 (depends-on "init-loader")
 (depends-on "json-mode")
 (depends-on "magit")
-(depends-on "ruby-block")
 (depends-on "ruby-end")
 (depends-on "sass-mode")
 (depends-on "slim-mode")
