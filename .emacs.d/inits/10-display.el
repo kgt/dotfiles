@@ -11,4 +11,8 @@
 (line-number-mode t)
 (column-number-mode t)
 
+(setq display-time-24hr-format t)
+(setq display-time-default-load-average nil)
+(display-time-mode)
+
 (transient-mark-mode 0)
