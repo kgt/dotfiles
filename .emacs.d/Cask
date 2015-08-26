@@ -3,6 +3,7 @@
 
 (depends-on "anzu")
 (depends-on "auto-complete")
+(depends-on "exec-path-from-shell")
 (depends-on "flycheck")
 (depends-on "helm")
 (depends-on "inf-ruby")
