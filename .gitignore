@@ -2,3 +2,4 @@
 /.emacs.d/auto-save-list
 /.emacs.d/recentf
 /.emacs.d/ac-comphist.dat
+/.emacs.d/inits/50-erc.el
