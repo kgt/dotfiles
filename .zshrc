@@ -1,3 +1,7 @@
+## Autoloads
+
+autoload -U add-zsh-hook
+
 ## Changing directory
 
 setopt auto_cd
@@ -40,6 +44,8 @@ setopt prompt_subst
 zstyle ":vcs_info:*" formats "%%F{2}(%s:%b)%%f "
 zstyle ":vcs_info:*" actionformats "%%F{2}(%s:%b|%a)%%f "
 
+add-zsh-hook precmd vcs_info
+
 if [[ -z "${SSH_CONNECTION}" ]]; then
   PROMPT="%B%F{4}%n@%m%#%b%f "
   PROMPT2="%B%F{4}>%b%f"
@@ -56,14 +62,15 @@ fi
 
 case "${TERM}" in
 xterm*)
-  precmd() {
-    vcs_info
-
+  function _precmd_set_title() {
     echo -ne "\e]0;${USER}@${HOST%%.*}:${PWD/${HOME}/~}\a"
   }
-  preexec() {
+  function _preexec_set_title() {
     echo -ne "\e]0;${USER}@${HOST%%.*}:${1}\a"
   }
+
+  add-zsh-hook precmd _precmd_set_title
+  add-zsh-hook preexec _preexec_set_title
   ;;
 esac
 
