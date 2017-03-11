@@ -1,10 +1,10 @@
-# 移動
+## Changing directory
 
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-# 履歴
+## History
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
@@ -16,7 +16,7 @@ setopt hist_ignore_space
 setopt hist_no_store
 setopt hist_reduce_blanks
 
-# 補完
+## Completion
 
 autoload -U compinit; compinit
 
@@ -30,7 +30,7 @@ fi
 
 setopt correct
 
-# プロンプト
+## Prompt
 
 autoload -U colors; colors
 autoload -U vcs_info
@@ -52,7 +52,7 @@ else
   RPROMPT2="%B%F{2}(%_)%b%f"
 fi
 
-# タイトル
+## Title
 
 case "${TERM}" in
 xterm*)
@@ -67,7 +67,7 @@ xterm*)
   ;;
 esac
 
-# エイリアス
+## Aliases
 
 case "${OSTYPE}" in
 linux*)
