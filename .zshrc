@@ -48,12 +48,12 @@ add-zsh-hook precmd vcs_info
 
 if [[ -z "${SSH_CONNECTION}" ]]; then
   PROMPT="%B%F{4}%n@%m%#%b%f "
-  PROMPT2="%B%F{4}>%b%f"
+  PROMPT2="%B%F{4}>%b%f "
   RPROMPT="\${vcs_info_msg_0_}%B%F{4}[%~]%b%f"
   RPROMPT2="%B%F{4}(%_)%b%f"
 else
   PROMPT="%B%F{2}%n@%m%#%b%f "
-  PROMPT2="%B%F{2}>%b%f"
+  PROMPT2="%B%F{2}>%b%f "
   RPROMPT="\${vcs_info_msg_0_}%B%F{2}[%~]%b%f"
   RPROMPT2="%B%F{2}(%_)%b%f"
 fi
