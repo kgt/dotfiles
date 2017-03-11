@@ -1,6 +1,6 @@
 (use-package anzu
   :diminish anzu-mode
+  :bind (("M-%"   . anzu-query-replace)
+	 ("C-M-%" . anzu-query-replace-regexp))
   :config
-  (global-anzu-mode)
-  (global-set-key (kbd "M-%") 'anzu-query-replace)
-  (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp))
+  (global-anzu-mode))
