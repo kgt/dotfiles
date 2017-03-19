@@ -27,9 +27,12 @@ autoload -U compinit; compinit
 if [[ -x dircolors ]]; then
   eval "`dircolors -b`"
 fi
+export LSCOLORS="ExGxFxdaCxDaDahbadaeec"
 
 if [[ -n $LS_COLORS ]]; then
-  zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"  
+  zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+else
+  zstyle ":completion:*" list-colors "di=01;34:ln=01;36:so=01;35:pi=33;40:ex=01;32:bd=01;33;40:cd=01;33;40:su=37;41:sg=30;43:tw=30;42:st=37;44"
 fi
 
 setopt correct
