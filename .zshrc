@@ -24,18 +24,19 @@ setopt hist_reduce_blanks
 
 autoload -U compinit; compinit
 
+setopt correct
+
+## Colors
+
 if [[ -x dircolors ]]; then
   eval "`dircolors -b`"
 fi
+if [[ -z $LS_COLORS ]]; then
+  export LS_COLORS="di=01;34:ln=01;36:so=01;35:pi=33;40:ex=01;32:bd=01;33;40:cd=01;33;40:su=37;41:sg=30;43:tw=30;42:st=37;44"
+fi
 export LSCOLORS="ExGxFxdaCxDaDahbadaeec"
 
-if [[ -n $LS_COLORS ]]; then
-  zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
-else
-  zstyle ":completion:*" list-colors "di=01;34:ln=01;36:so=01;35:pi=33;40:ex=01;32:bd=01;33;40:cd=01;33;40:su=37;41:sg=30;43:tw=30;42:st=37;44"
-fi
-
-setopt correct
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 
 ## Prompt
 
