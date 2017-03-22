@@ -8,6 +8,10 @@
 		((eq system-type 'darwin)
 		 '((font . "Andale Mono-12"))))))
 
+(let ((mode 'dark))
+  (set-frame-parameter nil 'background-mode mode)
+  (set-terminal-parameter nil 'background-mode mode))
+
 (line-number-mode t)
 (column-number-mode t)
 
