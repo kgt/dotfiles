@@ -1,4 +1,5 @@
 (use-package recentf
+  :init
+  (custom-set-variables '(recentf-max-saved-items 1000))
   :config
-  (setq recentf-max-saved-items 1000)
   (recentf-mode))

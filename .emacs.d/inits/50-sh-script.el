@@ -1,5 +1,5 @@
 (use-package sh-script
   :defer t
-  :config
-  (setq sh-basic-offset 2)
-  (setq sh-indentation 2))
+  :init
+  (custom-set-variables '(sh-basic-offset 2)
+			'(sh-indentation 2)))

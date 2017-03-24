@@ -1,4 +1,4 @@
 (use-package css-mode
   :defer t
-  :config
-  (setq css-indent-offset 2))
+  :init
+  (custom-set-variables '(css-indent-offset 2)))

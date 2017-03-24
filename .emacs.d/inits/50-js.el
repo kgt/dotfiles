@@ -1,4 +1,4 @@
 (use-package js
   :defer t
-  :config
-  (setq js-indent-level 2))
+  :init
+  (custom-set-variables '(js-indent-level 2)))
