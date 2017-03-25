@@ -1,7 +1,28 @@
-;;; cask
+;; package
 
-(when (require 'cask nil t)
-  (cask-initialize))
+(custom-set-variables
+ '(package-archives
+   '(("gnu"   . "https://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/")))
+ '(package-selected-packages
+   '(anzu
+     auto-complete
+     color-theme-solarized
+     exec-path-from-shell
+     flycheck
+     helm
+     inf-ruby
+     init-loader
+     json-mode
+     magit
+     ruby-end
+     sass-mode
+     slim-mode
+     undo-tree
+     use-package
+     yaml-mode)))
+
+(package-initialize)
 
 ;;; use-package
 
