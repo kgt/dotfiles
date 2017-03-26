@@ -8,6 +8,7 @@
    '(anzu
      auto-complete
      color-theme-solarized
+     ddskk
      exec-path-from-shell
      flycheck
      helm
