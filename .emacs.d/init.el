@@ -12,6 +12,7 @@
      exec-path-from-shell
      flycheck
      helm
+     helm-projectile
      inf-ruby
      init-loader
      json-mode
