@@ -16,6 +16,7 @@
      init-loader
      json-mode
      magit
+     projectile
      ruby-end
      sass-mode
      slim-mode
