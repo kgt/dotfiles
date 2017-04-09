@@ -1,7 +1,11 @@
 typeset -U PATH path
 
-if whence rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
+path=(
+  ~/bin(N-/)
+  ~/.anyenv/bin(N-/)
+  $path
+)
 
-path=(~/bin(N-/) $path)
+if whence anyenv > /dev/null; then
+  eval "$(anyenv init -)"
+fi
