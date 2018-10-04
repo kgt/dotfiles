@@ -9,6 +9,7 @@
      auto-complete
      color-theme-solarized
      ddskk
+     diminish
      exec-path-from-shell
      flycheck
      helm
