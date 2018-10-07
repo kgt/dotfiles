@@ -6,7 +6,9 @@
 	,@(cond ((eq system-type 'windows-nt)
 		 '((font . "Consolas-10")))
 		((eq system-type 'darwin)
-		 '((font . "Menlo-12"))))))
+		 '((font . "Menlo-12")))
+		((eq system-type 'gnu/linux)
+		 '((font . "Monospace-10"))))))
 
 (let ((mode 'dark))
   (set-frame-parameter nil 'background-mode mode)
