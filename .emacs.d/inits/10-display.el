@@ -1,7 +1,5 @@
 (setq default-frame-alist
-      `((width          . 80)
-	(height         . 47)
-	(tool-bar-lines . nil)
+      `((tool-bar-lines . nil)
 	(alpha          . 90)
 	,@(cond ((eq system-type 'windows-nt)
 		 '((font . "Consolas-10")))
