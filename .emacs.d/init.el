@@ -7,7 +7,6 @@
  '(package-selected-packages
    '(anzu
      auto-complete
-     color-theme-solarized
      ddskk
      diminish
      exec-path-from-shell
@@ -22,6 +21,7 @@
      ruby-end
      sass-mode
      slim-mode
+     solarized-theme
      undo-tree
      use-package
      yaml-mode)))
