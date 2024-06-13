@@ -50,6 +50,11 @@
 ;; Auto complete parenthesis.
 (electric-pair-mode)
 
+;; Enable truncate lines on `prog-mode'.
+(defun my/enable-truncate-lines ()
+  (setq truncate-lines t))
+(add-hook 'prog-mode-hook #'my/enable-truncate-lines)
+
 ;; Set `exec-path'.
 (use-package exec-path-from-shell
   :unless (eq system-type 'windows-nt)
