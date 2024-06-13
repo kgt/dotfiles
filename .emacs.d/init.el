@@ -173,6 +173,7 @@
 
 (use-package ruby-end
   :defer t
+  :diminish ruby-end-mode
   :init
   ;; Disable inserting a new line on auto completing `end'.
   (setopt ruby-end-insert-newline nil))
