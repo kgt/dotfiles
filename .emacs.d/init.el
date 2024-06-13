@@ -171,8 +171,11 @@
   (add-to-list 'major-mode-remap-alist
                '(ruby-mode . ruby-ts-mode)))
 
-;; Disable inserting a new line on auto completing `end'.
-(setopt ruby-end-insert-newline nil)
+(use-package ruby-end
+  :defer t
+  :init
+  ;; Disable inserting a new line on auto completing `end'.
+  (setopt ruby-end-insert-newline nil))
 
 ;;; Languages - CSS
 (setopt css-indent-offset 2)
