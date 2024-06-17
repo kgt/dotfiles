@@ -50,6 +50,17 @@
 ;; Auto complete parenthesis.
 (electric-pair-mode)
 
+;; Disable `electric-pair-mode' on `isearch-mode'.
+(defvar my/electric-pair-mode)
+(defun my/store-and-disable-electric-pair-mode ()
+  (setq my/electric-pair-mode electric-pair-mode)
+  (electric-pair-mode -1))
+(defun my/restore-electric-pair-mode ()
+  (when my/electric-pair-mode
+    (electric-pair-mode)))
+(add-hook 'isearch-mode-hook #'my/store-and-disable-electric-pair-mode)
+(add-hook 'isearch-mode-end-hook #'my/restore-electric-pair-mode)
+
 ;; Enable truncate lines on `prog-mode'.
 (defun my/enable-truncate-lines ()
   (setq truncate-lines t))
