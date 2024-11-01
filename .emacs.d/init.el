@@ -163,7 +163,10 @@
 ;;; Languages
 (use-package flycheck
   :config
-  (global-flycheck-mode))
+  (global-flycheck-mode)
+  ;; Force script encoding on Windows Ruby.
+  (when (eq system-type 'windows-nt)
+    (put 'ruby (flycheck--checker-property-name 'command) '("ruby" "-w" "-c" "-Ku"))))
 
 ;;; Languages - Ruby
 ;; Disable inserting a encoding comment.
