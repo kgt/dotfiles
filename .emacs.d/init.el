@@ -94,7 +94,8 @@
 ;; Theme
 (let ((theme 'dracula))
   (when (member theme (custom-available-themes))
-    (load-theme theme t)))
+    (load-theme theme t)
+    (custom-set-faces '(lazy-highlight ((t (:background "#565761")))))))
 
 ;;; General keybindings
 (bind-key "C-c r" #'recentf-open)
