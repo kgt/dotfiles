@@ -12,7 +12,6 @@
           diminish
           dracula-theme
           exec-path-from-shell
-          flycheck
           inf-ruby
           magit
           orderless
@@ -162,12 +161,11 @@
   (global-corfu-mode))
 
 ;;; Languages
-(use-package flycheck
+(use-package eglot
+  :hook
+  (ruby-base-mode . eglot-ensure)
   :config
-  (global-flycheck-mode)
-  ;; Force script encoding on Windows Ruby.
-  (when (eq system-type 'windows-nt)
-    (put 'ruby (flycheck--checker-property-name 'command) '("ruby" "-w" "-c" "-Ku"))))
+  (add-to-list 'eglot-server-programs '(ruby-base-mode . ("ruby-lsp"))))
 
 ;;; Languages - Ruby
 ;; Disable inserting a encoding comment.
