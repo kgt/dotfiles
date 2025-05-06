@@ -46,19 +46,8 @@
 ;; Disable using tabs on indentation.
 (setq-default indent-tabs-mode nil)
 
-;; Auto complete parenthesis.
-(electric-pair-mode)
-
-;; Disable `electric-pair-mode' on `isearch-mode'.
-(defvar my/electric-pair-mode)
-(defun my/store-and-disable-electric-pair-mode ()
-  (setq my/electric-pair-mode electric-pair-mode)
-  (electric-pair-mode -1))
-(defun my/restore-electric-pair-mode ()
-  (when my/electric-pair-mode
-    (electric-pair-mode)))
-(add-hook 'isearch-mode-hook #'my/store-and-disable-electric-pair-mode)
-(add-hook 'isearch-mode-end-hook #'my/restore-electric-pair-mode)
+;; Auto complete parenthesis on `prog-mode'.
+(add-hook 'prog-mode-hook #'electric-pair-local-mode)
 
 ;; Enable truncate lines on `prog-mode'.
 (defun my/enable-truncate-lines ()
