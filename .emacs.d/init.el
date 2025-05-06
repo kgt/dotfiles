@@ -15,6 +15,7 @@
           inf-ruby
           magit
           marginalia
+          markdown-mode
           orderless
           ruby-end
           sass-mode
