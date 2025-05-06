@@ -46,6 +46,9 @@
 ;; Disable using tabs on indentation.
 (setq-default indent-tabs-mode nil)
 
+;; Highlight trailing whitespaces.
+(setq-default show-trailing-whitespace t)
+
 ;; Auto complete parenthesis on `prog-mode'.
 (add-hook 'prog-mode-hook #'electric-pair-local-mode)
 
