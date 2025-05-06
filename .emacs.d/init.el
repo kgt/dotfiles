@@ -14,6 +14,7 @@
           exec-path-from-shell
           inf-ruby
           magit
+          marginalia
           orderless
           ruby-end
           sass-mode
@@ -151,6 +152,10 @@
   (setopt corfu-cycle t)
   :config
   (global-corfu-mode))
+
+(use-package marginalia
+  :config
+  (marginalia-mode))
 
 ;;; Languages
 (use-package eglot
