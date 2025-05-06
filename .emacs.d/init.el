@@ -6,6 +6,7 @@
           ("melpa" . "https://melpa.org/packages/")))
 (setopt package-selected-packages
         '(anzu
+          colorful-mode
           consult
           corfu
           ddskk
@@ -89,6 +90,14 @@
   (when (member theme (custom-available-themes))
     (load-theme theme t)
     (custom-set-faces '(lazy-highlight ((t (:background "#565761")))))))
+
+;; colorful-mode
+(use-package colorful-mode
+  :init
+  (setopt colorful-allow-mouse-clicks nil)
+  (setopt css-fontify-colors nil)
+  :config
+  (global-colorful-mode))
 
 ;;; General keybindings
 (bind-key "C-c r" #'recentf-open)
