@@ -219,3 +219,8 @@
   (setopt undo-tree-auto-save-history nil)
   :config
   (global-undo-tree-mode))
+
+;; Load local config.
+(let ((path (locate-user-emacs-file "local.el")))
+  (when (file-exists-p path)
+    (load path)))
