@@ -12,7 +12,6 @@
           ddskk
           diminish
           dracula-theme
-          exec-path-from-shell
           inf-ruby
           magit
           marginalia
@@ -59,12 +58,6 @@
 (defun my/enable-truncate-lines ()
   (setq truncate-lines t))
 (add-hook 'prog-mode-hook #'my/enable-truncate-lines)
-
-;; Set `exec-path'.
-(use-package exec-path-from-shell
-  :unless (eq system-type 'windows-nt)
-  :config
-  (exec-path-from-shell-initialize))
 
 ;;; Display
 ;; Font
