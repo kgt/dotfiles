@@ -68,12 +68,8 @@
 
 ;;; Display
 ;; Font
-(let ((font (cond ((eq system-type 'windows-nt)
-                   "Consolas-10")
-                  (t
-                   "Monospace-10"))))
-  (setopt default-frame-alist
-          `((font  . ,font))))
+(setopt default-frame-alist
+        '((font . "Cascadia Mono-10")))
 
 ;; Disable tool bar.
 (tool-bar-mode -1)
