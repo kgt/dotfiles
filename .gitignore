@@ -1,7 +1,1 @@
-/.emacs.d/elpa
-/.emacs.d/auto-save-list
-/.emacs.d/recentf
-/.emacs.d/ac-comphist.dat
-/.emacs.d/projectile-bookmarks.eld
-/.emacs.d/projectile.cache
-/.emacs.d/inits/50-erc.el
+/.emacs.d/local.el
