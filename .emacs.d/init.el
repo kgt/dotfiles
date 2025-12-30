@@ -61,8 +61,19 @@
 
 ;;; Display
 ;; Font
+(create-fontset-from-ascii-font
+ "Cascadia Mono-10:weight=normal:slant=normal"
+ nil "my")
+(set-fontset-font
+ "fontset-my" 'unicode
+ "Noto Sans Mono CJK JP-10:weight=normal:slant=normal"
+ nil 'append)
+(set-fontset-font
+ "fontset-my" 'unicode
+ "Noto Color Emoji-10"
+ nil 'append)
 (setopt default-frame-alist
-        '((font . "Cascadia Mono-10")))
+        '((font . "fontset-my")))
 
 ;; Disable tool bar.
 (tool-bar-mode -1)
